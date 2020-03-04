@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Link } from "react-router-dom"
+import { Link, withRouter } from "react-router-dom"
 import {LinkContainer} from "react-router-bootstrap"
 import { Navbar, Nav, NavItem } from "react-bootstrap"
 import { Auth } from "aws-amplify";
@@ -31,6 +31,7 @@ function App(props) {
   const handleLogout = async () => {
     await Auth.signOut()
     userHasAuthenticated(false)
+    props.history.push('/login')
   }
 
   return (
@@ -65,4 +66,4 @@ function App(props) {
   );
 }
 
-export default App;
+export default withRouter(App);
