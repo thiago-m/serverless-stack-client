@@ -9,21 +9,21 @@ export default function Home(props) {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-    async function onLoad() {
-        if (!props.isAuthenticated) {
-            return;
-        }
+        async function onLoad() {
+            if (!props.isAuthenticated) {
+                return;
+            }
 
-        try {
-            const notes = await loadNotes();
-            setNotes(notes);
-        } catch (e) {
-            console.log(e)
-            alert(e);
-        }
+            try {
+                const notes = await loadNotes();
+                setNotes(notes);
+            } catch (e) {
+                console.log(e)
+                alert(e);
+            }
 
-        setIsLoading(false);
-    }
+            setIsLoading(false);
+        }
 
         onLoad();
     }, [props.isAuthenticated]);
