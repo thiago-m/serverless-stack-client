@@ -1,4 +1,5 @@
 export default {
+    STRIPE_KEY: "pk_test_mDVBjWakDOIbOeXX63D3s7g900UpFswB1M",
     s3: {
         REGION: "sa-east-1",
         BUCKET: "thiago.dev-notes-app-uploads"

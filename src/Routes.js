@@ -9,6 +9,7 @@ import Signup from "./pages/signup/Signup"
 import NotFound from "./pages/errors/NoFound"
 import NewNote from "./pages/notas/NewNote"
 import Nota from "./pages/nota/Nota"
+import Settings from './pages/settings/Settings'
 
 export default function Routes({ appProps }) {
     return (
@@ -18,6 +19,7 @@ export default function Routes({ appProps }) {
             <AppliedRoute path="/signup" exact component={Signup} appProps={appProps} />
             <AppliedRoute path="/notes/new" exact component={NewNote} appProps={appProps} />
             <AppliedRoute path="/notes/:id" exact component={Nota} appProps={appProps} />
+            <AppliedRoute path="/settings" exact component={Settings} appProps={appProps} />
 
             {/* Finally, catch all unmatched routes */}
             <Route component={NotFound} />
