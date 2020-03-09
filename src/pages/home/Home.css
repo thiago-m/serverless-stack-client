@@ -3,6 +3,14 @@
     text-align: center;
 }
 
+.Home .lander div {
+    padding-top: 20px;
+}
+
+.Home .lander div a:first-child {
+    margin-right: 20px;
+}
+
 .Home .lander h1 {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
