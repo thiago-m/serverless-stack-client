@@ -65,7 +65,7 @@ export default function Home(props) {
                     <Link to="/signup" className="btn btn-success btn-lg">
                         Signup
                     </Link>
-                </div>
+                </div> 
             </div>
         );
     }
